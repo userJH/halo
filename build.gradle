@@ -11,7 +11,7 @@ description = "Halo, An excellent open source blog publishing application."
 
 java {
     archivesBaseName = "halo"
-    sourceCompatibility = JavaVersion.VERSION_11
+    sourceCompatibility = JavaVersion.VERSION_1_8
 }
 
 repositories {

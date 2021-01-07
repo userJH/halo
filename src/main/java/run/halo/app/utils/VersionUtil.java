@@ -5,9 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * Version utility.
  *
- * @author ryanwang
  * @author johnniang
- * @date 2020-02-03
  * @date 2020-08-03
  */
 @Slf4j
