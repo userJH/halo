@@ -4,6 +4,8 @@ server:
   compression:
     enabled: false
 spring:
+  profiles:
+    active: jhy
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
   devtools:
@@ -15,10 +17,10 @@ spring:
     type: com.zaxxer.hikari.HikariDataSource
 
     # H2 database configuration.
-    driver-class-name: org.h2.Driver
-    url: jdbc:h2:file:~/.halo/db/halo
-    username: admin
-    password: 123456
+#    driver-class-name: org.h2.Driver
+#    url: jdbc:h2:file:~/.halo/db/halo
+#    username: admin
+#    password: 123456
 
   h2:
     console:
@@ -58,3 +60,7 @@ springfox:
 halo:
   download-timeout: 5m
   cache: memory
+
+
+
+#java -Dspring.profiles.active=dev

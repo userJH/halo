@@ -12,6 +12,7 @@ description = "Halo, An excellent open source blog publishing application."
 java {
     archivesBaseName = "halo"
     sourceCompatibility = JavaVersion.VERSION_1_8
+    println "java"
 }
 
 repositories {
@@ -21,6 +22,8 @@ repositories {
     }
     mavenCentral()
     jcenter()
+
+    println "repositories"
 }
 
 configurations {
@@ -32,6 +35,8 @@ configurations {
     compileOnly {
         extendsFrom annotationProcessor
     }
+
+    println "configurations"
 }
 
 
@@ -40,12 +45,15 @@ bootJar {
         attributes "Implementation-Title": "Halo Application",
                 "Implementation-Version": archiveVersion
     }
+    println "bootJar"
 }
 
 bootBuildImage.doFirst {
     // check data
     assert System.getenv("DOCKER_USERNAME") != null
     assert System.getenv("DOCKER_TOKEN") != null
+
+    println "bootBuildImage.doFirst"
 }
 
 bootBuildImage {
@@ -71,6 +79,8 @@ bootBuildImage {
             email = "hi@halo.run"
         }
     }
+
+    println "bootBuildImage"
 }
 
 ext {
@@ -97,6 +107,8 @@ ext {
     zxingVersion = "3.4.0"
     huaweiObsVersion = "3.19.7"
     githubApiVersion = "1.84"
+
+    println "load ext"
 }
 
 dependencies {
@@ -162,8 +174,12 @@ dependencies {
     }
 
     developmentOnly "org.springframework.boot:spring-boot-devtools"
+
+    println "dependencies"
 }
 
 test {
     useJUnitPlatform()
+
+    println "test"
 }
